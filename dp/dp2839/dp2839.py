@@ -1,5 +1,5 @@
 # [실버4] 설탕배달
-https://www.acmicpc.net/problem/2839
+# https://www.acmicpc.net/problem/2839
 
 M = int(input())
 cnt = 0
