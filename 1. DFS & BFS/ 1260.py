@@ -4,7 +4,7 @@ def dfs(c):
 
     for n in adj[c]:
         if not v[n]:    # 방문하지 않은 노드인 경우
-            dfs(n)
+            dfs(n)      # 재귀돌
 
 def bfs(s):
     q = []              # 필요한 q, v[], 변수 생성
