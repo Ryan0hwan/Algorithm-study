@@ -20,4 +20,4 @@ ans = 0
 v = [0]*(N+1)
 dfs(1)
 
-print(ans-1)
+print(ans-1)        # 처음 1은 포함 안됨
