@@ -7,7 +7,7 @@ ans : 정답표시할 배열
 ## DFS 풀이법
 dfs(c)
 1. v[c] = 1, ans_dfs.append(c)
-2. for n in adj[c]
+2. for n in adj[c]:
         if not v[n]: dfs(n)
 
 ## BFS 풀이법
