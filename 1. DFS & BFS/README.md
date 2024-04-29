@@ -4,13 +4,13 @@ ans_bfs or ans_dfs : 그래프를 adjacency matrix로 나타냄. / 양방향, �
 v[] :방문표시하는 배열. 
 ans : 정답표시할 배열
 
-## DFS 풀이법
+## DFS 풀이법 [재귀 사용해서, 코드가 짧은대신 메모리 소모가 많음]
 dfs(c)
 1. v[c] = 1, ans_dfs.append(c)
 2. for n in adj[c]:
         if not v[n]: dfs(n)
 
-## BFS 풀이법
+## BFS 풀이법 [코드가 긴 대신, 메모리는 아낌]
 bfs(s)
 1. q(큐), v(방문 표시), 변수 생성
 2. q에 초기 데이터(들) 삽입, v[]표시, ans처리   << 단위작업
