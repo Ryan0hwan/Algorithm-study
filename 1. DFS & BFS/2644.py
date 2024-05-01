@@ -16,7 +16,7 @@ def bfs(s, e):
                 q.append(n)
                 v[n] = v[c]+1
 
-    # 이곳의 코드를 실행했다면... 찾지못함!
+    # 찾지못함!
     return -1
 
 N = int(input())
