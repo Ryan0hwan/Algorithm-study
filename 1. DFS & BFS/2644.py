@@ -1,7 +1,6 @@
 def bfs(s, e):
     q = []
     v = [0]*(N+1)
-
     q.append(s)
     v[s] = 1
 
