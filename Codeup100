@@ -1,0 +1,137 @@
+5. "Hello World" 형태로 출력하기 
+print('"Hello World"') 또는 print("\"Hello World\"")
+
+18. 시:분 형식 입력받아, 시:분 형식으로 출력하기.
+h,m = map(int, input().split(':'))
+print(h, m, sep = ':')
+
+24. 알파벳 문자와 숫자로 이루어진 단어 2개를 입력받아 순서대로 붙여 출력
+print(input().replace(" ", ""))
+
+# 정수 하나, 문자 하나 입력받을 때 한줄로 쓰기
+a, b = int(input()), input()
+
+-----------------------------------------
+
+27. 10진수를 입력받아 16진수로 출력
+a = int(input())
+print("%x" %a)
+또는
+print("%x" %int(input()))
+
+29. 16진수를 입력받아 8진수로 출력
+print("%o" %int(input(), 16))
+
+30. 영문자를 입력받아 10진수로 출력
+a = ord(input())
+print("%d" %a)      # ord가 문자를 숫자로, chr가 숫자를 문자로.
+
+42. 실수 1개 입력받아 소수점 2째자리까지.
+a = float(input())
+print(format(a, ".2f"))
+
+45. 정수 2개(a, b)를 입력받아 합, 차, 곱, 몫, 나머지, 나눈 값을 자동으로 계산
+a, b = map(int, input().split())
+print(f"{a+b}\n{a-b}\n{a*b}\n{a//b}\n{a%b}")   # f-string 사용법
+print(format(a/b,".2f"))
+
+46. 정수 3개를 입력받아 합과 평균을 출력
+l = list(map(int, input().split()))            # list화 시키기.
+print(sum(l), format(sum(l)/len(l), ".2f"))     
+
+--------------------------------------------
+
+74. a부터 입력문자까지 출력하기.
+word = ord(input())
+t = ord('a')
+
+while t <= word:
+    print(chr(t), end = ' ')      # 이렇게 하면 띄어쓰기로 출력되네.
+    t +=1
+ 
+----------------------------------------------
+
+81. 16진수 구구단
+n = int(input(), 16)
+
+for i in range(1, 16):
+    print('%X'%n, '*', '%X'%i, '=', '%X'%(n*i), sep='' )  # sep는 값 사이 문자. end는 출력 후 들어갈 문자.
+       #  print("%X*%X=%X" %(n, i, n*i))
+
+
+84. 소수점 맞추기 팁 2가지.
+print(round(k, 1))
+print(format(k, ".1f"))    
+
+85. 부동소수점 표현 팁
+print('%.2f MB' %(k))
+
+88. 곱셉식 헷갈리지 말기
+a(n-1) : 틀린표현 // a*(n-1) : 맞는표현
+
+89. 거듭제곱 표현
+print(a**2) 
+
+
+92. 23번까지중, 출석을 n번 불러서 번호별로 불린횟수 출력.
+n = int(input())
+a = list(map(int, input().split()))  
+result = []                        # 입력, 초기화
+    
+for _ in range(23):                # 채워두고
+    result.append(0)
+
+for i in a:                        # result 값 바꾸고
+    result[i-1] += 1
+
+for j in range(23):                # 출력
+    print(result[j], end = ' ')
+    
+93. 리스트 값 거꾸로 출력하기.
+n = int(input())
+a = list(map(int, input().split()))
+
+for i in range(n-1, -1, -1):     # n-1부터 0까지.
+    print(a[i], end = ' ')
+
+    
+95. 바둑판 문제.
+n = int(input())
+result = [["0" for _ in range(19)] for _ in range(19)]    # 2차원 19x19 0으로 채우기.
+
+for i in range(n):
+    x, y = map(int, input().split())            # 그냥 채운거야.
+    result[x-1][y-1] = "1"
+    
+for k in result:                                # 결과값 출력.
+    print(" ".join(k))    # 공백을 기준으로 합쳐서 출력하는거야. join 사용 시, 무조건 문자열로!!
+    
+ 
+    
+96. 못품
+
+97. 2차원 그래프에서 막대 놓기
+
+# 입력, 2차원 0으로 초기화
+h, w = map(int, input().split())
+result = [[0 for _ in range(w)] for _ in range(h)]
+
+# 입력 및 막대가 세로냐 가로냐에 따른 구분.
+n = int(input())
+for _ in range(n):
+    l,d,x,y = map(int, input().split())
+    
+    if d==0:  # 가로(행 고정)
+       for i in range(l):
+           result[x-1][y+i-1] = 1
+        
+    else:     # 세로(열 고정)
+       for j in range(l):
+           result[x+j-1][y-1] = 1
+
+# 출력    
+for k in result:
+    print(" ".join(map(str,k)))    
+    
+    
+98. 못품
