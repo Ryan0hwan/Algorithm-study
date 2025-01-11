@@ -72,7 +72,6 @@ a(n-1) : 틀린표현 // a*(n-1) : 맞는표현
 89. 거듭제곱 표현
 print(a**2) 
 
-
 92. 23번까지중, 출석을 n번 불러서 번호별로 불린횟수 출력.
 n = int(input())
 a = list(map(int, input().split()))  
