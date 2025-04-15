@@ -1,3 +1,4 @@
+https://www.notion.so/1d1d9fdf7d92806e8e05c75eaf9f4630?pvs=4
 # 그리디 알고리즘
 
 * 매 순간마다 오직 최선의 경우만 생각한다.
