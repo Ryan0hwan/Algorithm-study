@@ -1,3 +1,4 @@
+https://www.notion.so/164d9fdf7d9280c387b9d92e33b87c8f?pvs=4
 # 완전탐색
 
 존재하는 모든 경우를  찾아보는 방법.
