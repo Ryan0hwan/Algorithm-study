@@ -17,6 +17,8 @@ ans = []
 for q in qry:
     l = bisect_left(cards, q)
     r = bisect_right(cards, q)
-    ans.append(1 if r-l else 0)
+    ans.append(1 if r-l > 0 else 0)     # ans.append(1 if r-l else 0)  # 0일때만, false고, 나머지 어떤 수던간 1이니까 이렇게도 가능. 
    
-print(*ans)
+
+print(*ans)   # print(ans)는 [a, b, c] 리스트 기호가 뜨니까.   
+              # 다른방법으로는, print(' '.join(map(str, ans)))  ans가 숫자 리스트기 때문에, str로 바꾸어서 join으로 공백으로 구분해서 출력하는것도 가능. 
