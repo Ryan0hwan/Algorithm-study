@@ -16,4 +16,4 @@ for i in range(2, N+1):
             dp[i][j] = dp[i-1][j-1] + dp[i-1][j+1] 
 
 print(sum(dp[N]) % MOD)
-출처: https://cotak.tistory.com/12 [TaxFree:티스토리]
+
