@@ -1,4 +1,5 @@
 # csv파일 불러와서 평균구하는 문제. 
+# test_scores.csv 파일이용
 
 infile = open('test_scores.csv', 'r')
 lines = infile.readlines()
